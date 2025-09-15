@@ -1,4 +1,4 @@
-📊 Data Analytics Class (COSC-6380)
+Data Analytics Class (COSC-6380)
 
 Welcome to the Data Analytics Class repository!
 This repo contains assignments, projects, and resources for learning data collection, cleaning, visualization, and exploratory analysis.
@@ -57,21 +57,21 @@ jupyter lab
 
 📊 Datasets Used
 
-The analysis uses open climate datasets (NetCDF4 format), downloaded from NOAA PSL and UCAR/NCAR:
-	1.	Global Daily Temperature (Tmin/Tmax)
-	•	Source: NOAA CPC Global Unified Temperature
-	•	Link
-	2.	Precipitation (monthly)
-	•	Source: GPCP Global Precipitation Climatology Project
-	•	Link
-	3.	Sea Surface Temperature (SST)
-	•	Source: NOAA ERSST v5
-	•	Link
-	4.	Soil Moisture (monthly)
-	•	Source: CPC Soil Moisture Dataset
-	•	Link
+This project uses open climate datasets (NetCDF4 format) from NOAA PSL and UCAR/NCAR:
+	1.	Global Daily Temperature (Tmin/Tmax, 2010–2025)
+Source: NOAA CPC Global Unified Temperature
+Dataset link
+	2.	Precipitation (monthly, 1979–present)
+Source: GPCP Global Precipitation Climatology Project
+Dataset link
+	3.	Sea Surface Temperature (SST, 1854–present)
+Source: NOAA ERSST v5
+Dataset link
+	4.	Soil Moisture (monthly, 1948–present)
+Source: CPC Soil Moisture Dataset
+Dataset link
 
-⚠️ Note: Datasets are large and not tracked in git. Please download them separately into the data/ folder.
+⚠️ Note: Large .nc datasets are not tracked in Git. Please download them separately into the data/ folder before running notebooks.
 
 ⸻
 
@@ -116,11 +116,12 @@ git push
 	•	Python for Data Analysis
 	•	Pandas Documentation
 	•	xarray Documentation
-	•	NOAA PSL Data
+	•	NOAA PSL Data Portal
 
 ⸻
 
 📬 Contact
 
-For questions, reach out to Abhishek Kumar Jha
+For questions, reach out to:
+Abhishek Kumar Jha
 📧 ajha3@islander.tamucc.edu
