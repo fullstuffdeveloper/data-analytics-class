@@ -1,0 +1,22 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.so
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Environments
+cosc6380_env/
+.venv/
+env/
+
+# Data (too large for GitHub)
+data/
+*.nc
+
+# OS
+.DS_Store
+Thumbs.db
