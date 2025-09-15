@@ -1,193 +1,99 @@
-+-+-+-+-+-+  
-# Data Analytics Class
+📊 Data Analytics Class (COSC-6380)
 
-Welcome to the Data Analytics Class! This repository contains resources, assignments, and projects related to our course.
+Welcome to the Data Analytics Class repository!
+This repo contains assignments, projects, and resources for learning data collection, cleaning, visualization, and exploratory analysis.
 
-## Table of Contents
-- Course Overview
-- Getting Started
-- Assignments
-- Projects
-- Resources
-- Contact
+⸻
 
-## Course Overview
-This course covers the fundamentals of data analytics, including data collection, cleaning, analysis, and visualization.
-
-## Getting Started
-To get started with the course, clone this repository and install the necessary dependencies.
-
-```bash
-git clone https://github.com/yourusername/data-analytics-class.git
-cd data-analytics-class
-source cosc6380_env/bin/activate
-jupyter notebook
-```
-
-## Assignments
-- Assignment 1: Data Cleaning
-- Assignment 2: Data Visualization
-- Assignment 3: Statistical Analysis
-
-## Projects
-- Project 1: Exploratory Data Analysis
-- Project 2: Predictive Modeling
-
-## Resources
-- [Python for Data Analysis](https://www.oreilly.com/library/view/python-for-data/9781491957653/)
-- [Pandas Documentation](https://pandas.pydata.org/docs/)
-
-## Contact
-For any questions, please reach out to [your.email@example.com](mailto:your.email@example.com).
-
-Happy Analyzing!  
-+-+-+-+-+-++-+-+-+-+-+  
-# Data Analytics Class
-
-Welcome to the Data Analytics Class! This repository contains resources, assignments, and projects related to our course.
-
-## Table of Contents
-- Course Overview
-- Getting Started
-- Assignments
-- Projects
-- Resources
-- Contact
-
-## Course Overview
-This course covers the fundamentals of data analytics, including data collection, cleaning, analysis, and visualization.
-
-## Getting Started
-To get started with the course, clone this repository and install the necessary dependencies.
-
-```bash
-git clone https://github.com/yourusername/data-analytics-class.git
-cd data-analytics-class
-```
-
-## Assignments
-- Assignment 1: Data Cleaning
-- Assignment 2: Data Visualization
-- Assignment 3: Statistical Analysis
-
-## Projects
-- Project 1: Exploratory Data Analysis
-- Project 2: Predictive Modeling
-
-## Resources
-- [Python for Data Analysis](https://www.oreilly.com/library/view/python-for-data/9781491957653/)
-- [Pandas Documentation](https://pandas.pydata.org/docs/)
-
-## Contact
-For any questions, please reach out to [your.email@example.com](mailto:your.email@example.com).
-
-Happy Analyzing!  
-+-+-+-+-+-+
-
-
-📂 Recommended Repo Structure
+📂 Repository Structure
 
 data-analytics-class/
 │
-├── data/                  # (add a .gitignore so large .nc files don’t go to GitHub)
-│   ├── temp/
-│   ├── precip/
-│   ├── sst/
-│   ├── soil/
+├── data/                  # (ignored in git; store local NetCDF datasets here)
+│   ├── temp/              # Tmin/Tmax daily temperature
+│   ├── precip/            # GPCP precipitation
+│   ├── sst/               # ERSST sea surface temperature
+│   └── soil/              # CPC soil moisture
 │
-├── notebooks/             # Jupyter notebooks
+├── notebooks/             # Jupyter notebooks for analysis
 │   ├── 01_temperature.ipynb
 │   ├── 02_precipitation.ipynb
 │   ├── 03_sst.ipynb
 │   ├── 04_soil_moisture.ipynb
 │   └── 05_combined_analysis.ipynb
 │
-├── outputs/               # saved figures/exports
+├── outputs/               # saved plots/figures/tables
+├── cosc6380_env/          # local virtual env (ignored in git)
 │
-├── cosc6380_env/          # (local virtual env, do NOT push to GitHub)
-│
-├── README.md              # project overview
-├── requirements.txt       # dependencies (exported with pip freeze)
-├── .gitignore             # what NOT to push (big data, envs, cache)
-└── LICENSE                # (optional, e.g. MIT)
+├── requirements.txt       # Python dependencies
+├── .gitignore             # ignored files/folders
+├── LICENSE                # e.g., MIT license
+└── README.md              # project overview
 
 
 ⸻
 
-⚙️ .gitignore (important!)
+🚀 Setup Instructions
+	1.	Clone the repo:
 
-Create a .gitignore file in your root:
-
-# Python
-__pycache__/
-*.pyc
-*.pyo
-*.pyd
-*.so
-
-# Jupyter
-.ipynb_checkpoints/
-
-# Environments
-cosc6380_env/
-.venv/
-env/
-
-# Data (too large for GitHub)
-data/
-*.nc
-
-# OS
-.DS_Store
-Thumbs.db
+git clone https://github.com/fullstuffdeveloper/data-analytics-class.git
+cd data-analytics-class
 
 
-⸻
-
-📄 README.md
-
-Example starter (replace with your project details):
-
-# Data Analytics Class (COSC-6380)
-
-This repo contains Jupyter notebooks and resources for COSC-6380 assignments.
-
-## 📂 Structure
-- `notebooks/` → analysis notebooks
-- `data/` → local NetCDF datasets (ignored from GitHub)
-- `outputs/` → generated plots and figures
-- `requirements.txt` → Python dependencies
-
-## 🚀 Setup
-1. Clone the repo:
-   ```bash
-   git clone https://github.com/YOUR_USERNAME/data-analytics-class.git
-   cd data-analytics-class
-
-	2.	Create environment & install requirements:
+	2.	Create a virtual environment & install requirements:
 
 python3 -m venv cosc6380_env
 source cosc6380_env/bin/activate
 pip install -r requirements.txt
 
 
+	3.	Launch JupyterLab:
 
-📊 Datasets
-	•	NOAA CPC Global Daily Temperature (Tmin/Tmax, 2010–2025)
-	•	GPCP Precipitation
-	•	ERSST Sea Surface Temperature
-	•	CPC Soil Moisture
+jupyter lab
 
-⚠️ Note: Large .nc datasets are not included in the repo; please download separately from NOAA/UCAR links.
 
----
 
-## 🚀 GitHub Workflow
-1. **Initialize repo locally**:
-   ```bash
-   cd data-analytics-class
-   git init
-   git remote add origin https://github.com/YOUR_USERNAME/data-analytics-class.git
+⸻
+
+📊 Datasets Used
+
+The analysis uses open climate datasets (NetCDF4 format), downloaded from NOAA PSL and UCAR/NCAR:
+	1.	Global Daily Temperature (Tmin/Tmax)
+	•	Source: NOAA CPC Global Unified Temperature
+	•	Link
+	2.	Precipitation (monthly)
+	•	Source: GPCP Global Precipitation Climatology Project
+	•	Link
+	3.	Sea Surface Temperature (SST)
+	•	Source: NOAA ERSST v5
+	•	Link
+	4.	Soil Moisture (monthly)
+	•	Source: CPC Soil Moisture Dataset
+	•	Link
+
+⚠️ Note: Datasets are large and not tracked in git. Please download them separately into the data/ folder.
+
+⸻
+
+📘 Assignments
+	•	Assignment 1: Data Cleaning
+	•	Assignment 2: Data Visualization
+	•	Assignment 3: Statistical Analysis
+
+⸻
+
+📗 Projects
+	•	Project 1: Exploratory Data Analysis
+	•	Project 2: Predictive Modeling
+
+⸻
+
+🛠 GitHub Workflow
+	1.	Initialize repo locally:
+
+git init
+git remote add origin https://github.com/fullstuffdeveloper/data-analytics-class.git
+
 
 	2.	First commit:
 
@@ -201,3 +107,20 @@ git push -u origin main
 git add notebooks/01_temperature.ipynb
 git commit -m "Add temperature analysis starter"
 git push
+
+
+
+⸻
+
+📚 Resources
+	•	Python for Data Analysis
+	•	Pandas Documentation
+	•	xarray Documentation
+	•	NOAA PSL Data
+
+⸻
+
+📬 Contact
+
+For questions, reach out to Abhishek Kumar Jha
+📧 ajha3@islander.tamucc.edu
